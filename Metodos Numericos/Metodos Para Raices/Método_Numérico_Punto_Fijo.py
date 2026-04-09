@@ -16,13 +16,14 @@ X0 = float(input("Ingresa el valor de X0:"))
 
 erra = float(input("Ingresa el error permitido en porcentaje:"))
 error = 10000
+max_iter = 100
 Xi_anterior = X0
 n = 0
 
 def f(x):                                  
     return eval(fgx, {"x": x, "e": math.e, "log": math.log, "sin": math.sin, "exp": math.exp})
 
-while error > erra:
+while error > erra and n < max_iter:
     Xi = f(X0)
     
     if Xi != 0:

@@ -2,9 +2,10 @@
 #Autor: Aguilar Ortiz Victor 
 #Descripción: Resuelve ecuaciones algebraicas 
 #             por el método de bisección
-#Funnción con la que trabaja el progrma: a) f(x)= (3x^2-18x+15)/5
+#Funnción con la que trabaja el progrma: a) f(x)= ((3 * x**2)-(18 * x)+(15)) / 5
 
 import matplotlib.pyplot as plt
+import math
 
 ejex = []                                      #Lista donde se guardarán los valores del eje x
 ejey = []                                      #Lista donde se guardarán los valores del eje y
@@ -18,9 +19,11 @@ erra = float(input("Ahora el error aproximado:")) #Error aproximado
 n = 0                                          #Variable para el contador n
 
 error = abs(a - b)                             #Error que se estara comparando con erra
-x = 0                                      #Variable x para la función   
+x = 0
+e = math.e
+                                      #Variable x para la función   
 def f(x):                                  #Definimos la funcion f(x)
-    return ((3 * x**2)-(18 * x)+(15)) / 5  #Escribimos la función para recibir los resultados de la funcion evaluada
+    return ((3 * x**2)-(18 * x)+(15)) / 5   #Escribimos la función para recibir los resultados de la funcion evaluada
 
 while error > erra: 
     pi = (b + a) / 2                           #Se calcula pi para los intervalos
